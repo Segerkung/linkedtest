@@ -1,3 +1,5 @@
+import com.sun.org.apache.xpath.internal.objects.XNull;
+
 /**
  * Linked list to be used as a queue. Only needs addLast and removeFirst (enqueue and dequeue) together with
  * size() and isEmpty().
@@ -20,8 +22,14 @@ public class LinkedList {
      * (first=null). Make sure to solve that properly...
      * @param newNode
      */
-    public void addLast(Node newNode) {
+    public void addLast(Node newNode)  {
+        if (first == null) {
+            first = newNode;
+        } else {
+            first.next = newNode;
 
+
+        }
     }
 
     /**
