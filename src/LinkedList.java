@@ -10,12 +10,14 @@ import com.sun.org.apache.xpath.internal.objects.XNull;
 public class LinkedList {
     Node first;
 
+
     /**
      * Constructor to create an empty list.
      */
     public LinkedList() {
         first = null;
     }
+
 
     /**
      * Adds a new Node to the list. The Node is always added last. There's a special case when the list is empty
@@ -26,9 +28,9 @@ public class LinkedList {
         if (first == null) {
             first = newNode;
         } else {
+            newNode = first;
+            while newNode.next = null
             first.next = newNode;
-
-
         }
     }
 
