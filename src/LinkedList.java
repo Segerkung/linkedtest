@@ -9,6 +9,8 @@ import com.sun.org.apache.xpath.internal.objects.XNull;
  */
 public class LinkedList {
     Node first;
+    private int variabel = 0;
+
 
 
     /**
@@ -24,15 +26,21 @@ public class LinkedList {
      * (first=null). Make sure to solve that properly...
      * @param newNode
      */
-    public void addLast(Node newNode)  {
+    public void addLast(Node newNode) {
         if (first == null) {
             first = newNode;
+            variabel++;
         } else {
-            newNode = first;
-            while newNode.next = null
             first.next = newNode;
+            Node last = first;
+            while (last.next != null) {
+                last = last.next;
+                variabel++;
+            }
+            last.next = newNode;
         }
     }
+
 
     /**
      * Removes and returns the first element of the list. Check if the list is empty and return null in that case
@@ -50,7 +58,7 @@ public class LinkedList {
      * @return
      */
     public int size() {
-        return 0;
+        return variabel;
     }
 
     /**
