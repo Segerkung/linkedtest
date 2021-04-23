@@ -48,6 +48,7 @@ public class LinkedList {
      * @return
      */
     public Node removeFirst() {
+        variabel--;
         return null;
     }
 
